@@ -1,3 +1,19 @@
+# Environment Dashboard Lab
+
+**Completing all objectives in this assignment will earn you one point each for sensing, circuitry, data analysis and visualization, and inter-device communication**. This assignment covers all IoT [Course Learning Outcomes](https://github.com/allegheny-college-cmpsc-406-spring-2024/course-materials?tab=readme-ov-file#course-learning-outcomes). 
+
+## Steps
+
+
+
+### Step One: Use your Pico and a BME 280 to create a cloud dashboard measuring temperature, humidity, and barometric pressure
+
+### Step Two: Add another sensor to your dashboard. 
+
+### Step Three: 
+
+
+
 References
 
 bme280 dashboard https://www.hivemq.com/blog/iot-reading-sensor-data-raspberry-pi-pico-w-micropython-mqtt-node-red/

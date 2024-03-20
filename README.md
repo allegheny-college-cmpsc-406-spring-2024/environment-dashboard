@@ -8,13 +8,15 @@ As you work, be sure to copy, paste, and commit your Pico code regularly to `bui
 
 ### Step One: Use your Pico and a BME 280 to create a cloud dashboard measuring temperature, humidity, and barometric pressure
 
-[Follow this tutorial](https://www.hivemq.com/blog/iot-reading-sensor-data-raspberry-pi-pico-w-micropython-mqtt-node-red/) to complete step one. This is NOT a very clear piece of documentation. Working with it is a good exercise in working with limited online resources.
+[Follow this tutorial](https://www.hivemq.com/blog/iot-reading-sensor-data-raspberry-pi-pico-w-micropython-mqtt-node-red/) to complete step one, but **before you begin take note of the caveats below**. This is NOT a very clear piece of documentation. Working with it is a good exercise in working with limited online resources.
 
-> \[!NOTE\]  
-> You will have already completed some of the necessary steps in the last Pico assignment.
+### Caveats
 
-> \[!TIP\]  
-> You can use avoid installing `upip` by using the Thonny package manager to install `umqtt.simple`.
+- You will have already completed some of the necessary steps in the last Pico assignment.
+- The MQTT library listed in the assignment is buggy. Instead, you'll use `micropython-mqtt`:
+  - Save [this file](https://github.com/peterhinch/micropython-mqtt/blob/master/mqtt_as/mqtt_as.py) to the `lib` directory on your pico
+  - Adapt your code using [this documentation](https://github.com/peterhinch/micropython-mqtt/blob/master/mqtt_as/README.md#8-hive-mq)
+- MORE INSTRUCTION COMING SOON: we will probably use a different dashboard library than the one listed in the tutorial 
 
 ### Step Two: Add the onboard temp sensor to your dashboard
 

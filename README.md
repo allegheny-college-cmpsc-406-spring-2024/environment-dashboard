@@ -16,7 +16,7 @@ As you work, be sure to copy, paste, and commit your Pico code regularly to `bui
 - The MQTT library listed in the assignment is buggy. Instead, you'll use `micropython-mqtt`:
   - Save [this file](https://github.com/peterhinch/micropython-mqtt/blob/master/mqtt_as/mqtt_as.py) to the `lib` directory on your pico
   - Adapt your code using [this documentation](https://github.com/peterhinch/micropython-mqtt/blob/master/mqtt_as/README.md#8-hive-mq)
-- MORE INSTRUCTION COMING SOON: we will probably use a different dashboard library than the one listed in the tutorial 
+- We will be using Flask rather than NODE-RED to create our dashboards. When you get to this step, talk to professor. 
 
 ### Step Two: Add the onboard temp sensor to your dashboard
 

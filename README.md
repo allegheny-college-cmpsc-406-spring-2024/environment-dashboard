@@ -15,21 +15,31 @@ As you work, be sure to copy, paste, and commit your Pico code regularly to `bui
 - You will have already completed some of the necessary steps in the last Pico assignment.
 - The MQTT library listed in the assignment is buggy. Instead, you'll use `micropython-mqtt`:
   - Save [this file](https://github.com/peterhinch/micropython-mqtt/blob/master/mqtt_as/mqtt_as.py) to the `lib` directory on your pico
-  - Adapt your code using [this documentation](https://github.com/peterhinch/micropython-mqtt/blob/master/mqtt_as/README.md#8-hive-mq)
-- We will be using Flask rather than NODE-RED to create our dashboards. See step two for more info on Flask. 
+  - Adapt your code using [this documentation](https://github.com/peterhinch/micropython-mqtt/blob/master/mqtt_as/README.md#8-hive-mq). You can also reference [this example]('/build/example.py')
+- We will be using Flask rather than NODE-RED to create our dashboards. See step two for more info on Flask.
 
 ### Step Two: Use Flask to receive and display data
 
-1. Before you attempt to subscribe to your data feed with Flask, make sure that your data is publishing properly: 
-  - Go to your cluster in [HiveMQ](https://console.hivemq.cloud/) by clicking it in the cloud menu on the left side. 
-  - Choose **Web Client** from the top menu. Type in the credentials created under "Access Management" (make sure you have set the permissions to Publish/Subscribe). Click "Connect Client", then "Subscribe to all Topics". 
-  - Scroll to the bottom of the web client page. If your data is publishing, you will see it at the bottom of the page.
-2. `Clone` and/or `pull` this repo and `cd` into it. (You may have to merge if you've already cloned it, as I've updated the repo remotely) 
-3. Install requirements
-  - Python dependencies for next steps are listed in `requirements.txt`. You can set up a virtual environment and/or install the requirements using `pip`.
-4. Run the dashboard.
-  - In terminal, `cd` into your assignment repo and then into `flask`. Run `python dashboard.py`
-  
+1.  Before you attempt to subscribe to your data feed with Flask, make sure that your data is publishing properly:
+
+- Go to your cluster in [HiveMQ](https://console.hivemq.cloud/) by clicking it in the cloud menu on the left side.
+- Choose **Web Client** from the top menu. Type in the credentials created under "Access Management" (make sure you have set the permissions to Publish/Subscribe). Click "Connect Client", then "Subscribe to all Topics".
+- Scroll to the bottom of the web client page. If your data is publishing, you will see it at the bottom of the page.
+
+1.  `Clone` and/or `pull` this repo and `cd` into it. (You may have to merge if you've already cloned it, as I've updated the repo remotely)
+2.  Install requirements
+
+- Python dependencies for next steps are listed in `requirements.txt`. You can set up a virtual environment and/or install the requirements using `pip`.
+
+1.  Run the dashboard.
+
+- In Terminal, `cd` into your assignment repo and then into `flask`. Run `python dashboard.py`. Then go to `https://localhost:8000` in your browser.
+- You will see that the dashboard is outputting data about the price of Bitcoin on a single gauge. Your job is now to update `flask/dashboard.py` and `flask/templates/index.html` so that instead it shows two gauges with barometric pressure and temperature. 
+- To do this, reference the `paho-mqtt` documentation [here](https://pypi.org/project/paho-mqtt/). You will also need these two commands to connect to HiveMq with your credentials: 
+```
+  client.tls_set()  # <--- even without arguments
+  client.username_pw_set(username=user, password=pw)
+```
 
 ### Step Three: Add the onboard temp sensor to your dashboard
 

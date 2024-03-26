@@ -15,7 +15,7 @@ As you work, be sure to copy, paste, and commit your Pico code regularly to `bui
 - You will have already completed some of the necessary steps in the last Pico assignment.
 - The MQTT library listed in the assignment is buggy. Instead, you'll use `micropython-mqtt`:
   - Save [this file](https://github.com/peterhinch/micropython-mqtt/blob/master/mqtt_as/mqtt_as.py) to the `lib` directory on your pico
-  - Adapt your code using [this documentation](https://github.com/peterhinch/micropython-mqtt/blob/master/mqtt_as/README.md#8-hive-mq). You can also reference [this example]('/build/example.py')
+  - Adapt your code using [this documentation](https://github.com/peterhinch/micropython-mqtt/blob/master/mqtt_as/README.md#8-hive-mq). You can also reference [this example](/build/example.py)
 - We will be using Flask rather than NODE-RED to create our dashboards. See step two for more info on Flask.
 
 ### Step Two: Use Flask to receive and display data

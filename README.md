@@ -31,7 +31,7 @@ As you work, be sure to copy, paste, and commit your Pico code regularly to `bui
   - Python dependencies for next steps are listed in `requirements.txt`. You can set up a virtual environment and/or install the requirements using `pip`.
 
 4.  Run the dashboard.
-  - In Terminal, `cd` into your assignment repo and then into `flask`. Run `python dashboard.py`. Then go to `https://localhost:8000` in your browser.
+  - In Terminal, `cd` into your assignment repo and then into `flask`. Run `python dashboard.py`. Then go to `http://localhost:8000` in your browser.
   - You will see that the dashboard is outputting data about the price of Bitcoin on a single gauge. Your job is now to update `flask/dashboard.py` and `flask/templates/index.html` so that instead it shows two gauges with barometric pressure and temperature, as measured by your Pico.
   - To do this, reference the `paho-mqtt` documentation [here](https://pypi.org/project/paho-mqtt/). You will also need these two commands to connect to HiveMQ with your credentials:
   ```

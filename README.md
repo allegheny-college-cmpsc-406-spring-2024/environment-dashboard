@@ -16,13 +16,26 @@ As you work, be sure to copy, paste, and commit your Pico code regularly to `bui
 - The MQTT library listed in the assignment is buggy. Instead, you'll use `micropython-mqtt`:
   - Save [this file](https://github.com/peterhinch/micropython-mqtt/blob/master/mqtt_as/mqtt_as.py) to the `lib` directory on your pico
   - Adapt your code using [this documentation](https://github.com/peterhinch/micropython-mqtt/blob/master/mqtt_as/README.md#8-hive-mq)
-- We will be using Flask rather than NODE-RED to create our dashboards. When you get to this step, talk to professor. 
+- We will be using Flask rather than NODE-RED to create our dashboards. See step two for more info on Flask. 
 
-### Step Two: Add the onboard temp sensor to your dashboard
+### Step Two: Use Flask to receive and display data
+
+1. Before you attempt to subscribe to your data feed with Flask, make sure that your data is publishing properly: 
+  - Go to your cluster in [HiveMQ](https://console.hivemq.cloud/) by clicking it in the cloud menu on the left side. 
+  - Choose **Web Client** from the top menu. Type in the credentials created under "Access Management" (make sure you have set the permissions to Publish/Subscribe). Click "Connect Client", then "Subscribe to all Topics". 
+  - Scroll to the bottom of the web client page. If your data is publishing, you will see it at the bottom of the page.
+2. `Clone` and/or `pull` this repo and `cd` into it. (You may have to merge if you've already cloned it, as I've updated the repo remotely) 
+3. Install requirements
+  - Python dependencies for next steps are listed in `requirements.txt`. You can set up a virtual environment and/or install the requirements using `pip`.
+4. Run the dashboard.
+  - In terminal, `cd` into your assignment repo and then into `flask`. Run `python dashboard.py`
+  
+
+### Step Three: Add the onboard temp sensor to your dashboard
 
 Reference the [Pico Sockets](https://github.com/allegheny-college-cmpsc-406-spring-2024/pico-sockets) assignment in reading from the onboard temperature sensor. Add this sensor to your IoT cloud dashboard on HiveMQ.
 
-### Step Three: Add another sensor to the Pico and your dashboard.
+### Step Four: Add another sensor to the Pico and your dashboard.
 
 Choose one more external sensor. Talk to your professor about available sensors — there are enough for everyone, but specific modules are first come, first served! If there is a sensor you really want you can ask about it before you start working.
 

@@ -35,17 +35,6 @@ def my_event(message):
     emit('my_response',
          {'data': message['data'], 'count': session['receive_count']})
 
-# Receive the test request from client and send back a test response
-@socketio.on('test_message')
-def handle_message(data):
-    print('received message: ' + str(data))
-    emit('test_response', {'data': 'Test response sent'})
-
-# Broadcast a message to all clients
-@socketio.on('broadcast_message')
-def handle_broadcast(data):
-    print('received: ' + str(data))
-    emit('broadcast_response', {'data': 'Broadcast sent'}, broadcast=True)
 
 @socketio.event
 def connect():

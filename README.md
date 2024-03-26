@@ -32,8 +32,8 @@ As you work, be sure to copy, paste, and commit your Pico code regularly to `bui
 
 1.  Run the dashboard.
   - In Terminal, `cd` into your assignment repo and then into `flask`. Run `python dashboard.py`. Then go to `https://localhost:8000` in your browser.
-  - You will see that the dashboard is outputting data about the price of Bitcoin on a single gauge. Your job is now to update `flask/dashboard.py` and `flask/templates/index.html` so that instead it shows two gauges with barometric pressure and temperature.
-  - To do this, reference the `paho-mqtt` documentation [here](https://pypi.org/project/paho-mqtt/). You will also need these two commands to connect to HiveMq with your credentials:
+  - You will see that the dashboard is outputting data about the price of Bitcoin on a single gauge. Your job is now to update `flask/dashboard.py` and `flask/templates/index.html` so that instead it shows two gauges with barometric pressure and temperature, as measured by your Pico.
+  - To do this, reference the `paho-mqtt` documentation [here](https://pypi.org/project/paho-mqtt/). You will also need these two commands to connect to HiveMQ with your credentials:
   ```
   mqttc.tls_set()  # <--- even without arguments
   mqttc.username_pw_set(username=user, password=pw)
@@ -41,7 +41,7 @@ As you work, be sure to copy, paste, and commit your Pico code regularly to `bui
 
 ### Step Three: Add the onboard temp sensor to your dashboard
 
-Reference the [Pico Sockets](https://github.com/allegheny-college-cmpsc-406-spring-2024/pico-sockets) assignment in reading from the onboard temperature sensor. Add this sensor as a third gauge on your IoT cloud dashboard.
+Reference the [Pico Sockets](https://github.com/allegheny-college-cmpsc-406-spring-2024/pico-sockets) assignment to read from the onboard temperature sensor. Add this sensor as a third gauge on your IoT cloud dashboard.
 
 ### Step Four: Add another sensor to the Pico and your dashboard.
 

@@ -34,23 +34,24 @@ As you work, be sure to copy, paste, and commit your Pico code regularly to `bui
 1.  Run the dashboard.
 
 - In Terminal, `cd` into your assignment repo and then into `flask`. Run `python dashboard.py`. Then go to `https://localhost:8000` in your browser.
-- You will see that the dashboard is outputting data about the price of Bitcoin on a single gauge. Your job is now to update `flask/dashboard.py` and `flask/templates/index.html` so that instead it shows two gauges with barometric pressure and temperature. 
-- To do this, reference the `paho-mqtt` documentation [here](https://pypi.org/project/paho-mqtt/). You will also need these two commands to connect to HiveMq with your credentials: 
-```
-  client.tls_set()  # <--- even without arguments
-  client.username_pw_set(username=user, password=pw)
-```
+- You will see that the dashboard is outputting data about the price of Bitcoin on a single gauge. Your job is now to update `flask/dashboard.py` and `flask/templates/index.html` so that instead it shows two gauges with barometric pressure and temperature.
+- To do this, reference the `paho-mqtt` documentation [here](https://pypi.org/project/paho-mqtt/). You will also need these two commands to connect to HiveMq with your credentials:
 
 ### Step Three: Add the onboard temp sensor to your dashboard
 
-Reference the [Pico Sockets](https://github.com/allegheny-college-cmpsc-406-spring-2024/pico-sockets) assignment in reading from the onboard temperature sensor. Add this sensor to your IoT cloud dashboard on HiveMQ.
+Reference the [Pico Sockets](https://github.com/allegheny-college-cmpsc-406-spring-2024/pico-sockets) assignment in reading from the onboard temperature sensor. Add this sensor as a third gauge on your IoT cloud dashboard.
 
 ### Step Four: Add another sensor to the Pico and your dashboard.
 
 Choose one more external sensor. Talk to your professor about available sensors — there are enough for everyone, but specific modules are first come, first served! If there is a sensor you really want you can ask about it before you start working.
 
-Do independent research to figure out how to connect your sensor and add it to your IoT cloud dashboard.
+Do independent research to figure out how to connect your sensor and add it to your IoT cloud dashboard as a fourth gauge.
 
 ### Step Four: Document your work
 
 Make sure your code in `build/main.py` is up to date. Add images and writing as instructed to `docs/report.md`.
+
+```
+client.tls_set()  # <--- even without arguments
+client.username_pw_set(username=user, password=pw)
+```

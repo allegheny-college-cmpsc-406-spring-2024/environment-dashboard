@@ -10,7 +10,7 @@ As you work, be sure to copy, paste, and commit your Pico code regularly to `bui
 
 [Follow this tutorial](https://www.hivemq.com/blog/iot-reading-sensor-data-raspberry-pi-pico-w-micropython-mqtt-node-red/) to complete step one, but **before you begin take note of the caveats below**. This is NOT a very clear piece of documentation. Working with it is a good exercise in working with limited online resources.
 
-### Caveats
+#### Caveats
 
 - You will have already completed some of the necessary steps in the last Pico assignment.
 - The MQTT library listed in the assignment is buggy. Instead, you'll use `micropython-mqtt`:
